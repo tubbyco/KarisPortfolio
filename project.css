@@ -1,87 +1,84 @@
 /* ---- GENERAL ---- */
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
-
 body {
-    margin: 0;
-    font-family: 'EB Garamond', serif;
-    background-color: #FFFDF8;
-    color: #1B1B1B;
-    line-height: 1.6;
+  margin: 0;
+  font-family: "EB Garamond", serif;
+  background-color: #fffdf8;
+  color: #1b1b1b;
+  line-height: 1.6;
 }
 
 /* ---- NAV ---- */
 nav {
-     position: sticky;
-        top: 0;
-        z-index: 999;
-        background: transparent;
-    display: flex;
-    justify-content: flex-end;
-    gap: 40px;
-    padding: 40px 80px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: transparent;
+  display: flex;
+  justify-content: flex-end;
+  gap: 40px;
+  padding: 40px 80px;
 }
 
 nav a {
-    color: #F02800;
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: 500;
-    transition: opacity 0.3s ease;
+  color: #f02800;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+  transition: opacity 0.3s ease;
 }
 
 nav a:hover {
-    opacity: 0.7;
+  opacity: 0.7;
 }
-
 
 /* Global hover style for all links */
 a {
-    color: inherit;
-    text-decoration: none;
-    position: relative;
-    transition: color 0.3s ease, opacity 0.3s ease;
+  color: inherit;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease, opacity 0.3s ease;
 }
 
 a:hover {
-    opacity: 0.7;
+  opacity: 0.7;
 }
 
 /* Soft underline animation */
 a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -2px;
-    width: 0%;
-    height: 1px;
-    background-color: currentColor;
-    transition: width 0.3s ease;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0%;
+  height: 1px;
+  background-color: currentColor;
+  transition: width 0.3s ease;
 }
 
 a:hover::after {
-    width: 100%;
+  width: 100%;
 }
-
 
 /* ---------------- HERO SECTION ---------------- */
 
 .hero-container {
-    margin: 0 auto;
-    padding: 80px 80px 60px;
+  margin: 0 auto;
+  padding: 80px 80px 60px;
 }
 
 .project-title {
-    max-width: 1000px;
-    font-size: 32px;
-    line-height: 1.45;
-    font-weight: 500;
-    margin-bottom: 40px;
+  max-width: 1000px;
+  font-size: 32px;
+  line-height: 1.45;
+  font-weight: 500;
+  margin-bottom: 40px;
 }
 
-.hero-image { 
+.hero-image {
   margin: 0 auto;
   width: 100%;
   height: auto;
@@ -100,20 +97,19 @@ a:hover::after {
 /* ---------------- BODY WIDTH (same as homepage) ---------------- */
 
 .container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 60px 120px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 60px 120px;
 }
 
 /* ---------------- PROJECT INFO ---------------- */
 
-
 .overline {
   list-style: none;
   padding: 0;
-  margin: 32px 0 40px;        /* gap below title & above image */
+  margin: 32px 0 40px; /* gap below title & above image */
   display: flex;
-  gap: 120px;                 /* space between Role & Timeline */
+  gap: 120px; /* space between Role & Timeline */
 }
 
 .overline-item {
@@ -124,118 +120,114 @@ a:hover::after {
 
 .overline-label {
   font-size: 20px;
-  color: #A39E96;             /* soft grey, like your Selected works label */
+  color: #a39e96; /* soft grey, like your Selected works label */
 }
 
 .overline-desc {
   font-size: 20px;
-  color: #1B1B1B;
+  color: #1b1b1b;
 }
 
 /* ---------------- SECTION HEADERS ---------------- */
 
 .section-header {
-    font-size: 22px;
-    font-weight: 500;
-    margin-bottom: 15px;
-    margin-top: 40px;
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  margin-top: 40px;
 }
 
 /* ---------------- PARAGRAPHS ---------------- */
 
 .project-paragraph {
-    font-size: 18px;
-    max-width: 800px;
+  font-size: 18px;
+  max-width: 800px;
 }
 
 /* Footer */
 
 footer {
-    width: 100%;
+  width: 100%;
 }
 
 .footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 20px;
-    padding: 40px 80px; /* full-width spacing like nav */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  padding: 40px 80px; /* full-width spacing like nav */
 }
 
-
 .footer p {
-    color:#A39E96;
-    font-size: 20px;
+  color: #a39e96;
+  font-size: 20px;
 }
 
 .footer-links a {
-    color: #F02800;
-    text-decoration: none;
-    margin-left: 24px;
-    font-size: 20px;
+  color: #f02800;
+  text-decoration: none;
+  margin-left: 24px;
+  font-size: 20px;
 }
 
 .footer-links a:hover {
-    opacity: 0.7;
+  opacity: 0.7;
 }
 
 /* ---------------- RESPONSIVE ---------------- */
 
 @media (max-width: 768px) {
-    nav {
-         position: sticky;
-        top: 0;
-        z-index: 999;
-        background: transparent;
-        padding: 30px 20px;
-        gap: 24px;
-    }
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background: transparent;
+    padding: 30px 20px;
+    gap: 24px;
+  }
 
-    .hero-container {
-        padding: 50px 20px;
-    }
+  .hero-container {
+    padding: 50px 20px;
+  }
 
-    .project-title {
-        font-size: 26px;
-    }
+  .project-title {
+    font-size: 26px;
+  }
 
-    .project-info {
-        flex-direction: column;
-        gap: 20px;
-    }
+  .project-info {
+    flex-direction: column;
+    gap: 20px;
+  }
 
-    .container {
-        padding: 0 20px 80px;
-    }
+  .container {
+    padding: 0 20px 80px;
+  }
 
   .overline {
     flex-direction: column;
     gap: 16px;
   }
 
-   /* ===== FOOTER MOBILE ===== */
-    .footer {
-        flex-direction: column;      /* stack text + links */
-        align-items: flex-start;     /* left-align everything */
-        padding: 24px 20px 32px;     /* match mobile padding */
-        gap: 8px;                    /* space between lines */
-    }
+  /* ===== FOOTER MOBILE ===== */
+  .footer {
+    flex-direction: column; /* stack text + links */
+    align-items: flex-start; /* left-align everything */
+    padding: 24px 20px 32px; /* match mobile padding */
+    gap: 8px; /* space between lines */
+  }
 
-    .footer p {
-        font-size: 16px;
-    }
+  .footer p {
+    font-size: 16px;
+  }
 
-    .footer-links {
-        margin-top: 4px;
-    }
+  .footer-links {
+    margin-top: 4px;
+  }
 
-    .footer-links a {
-        font-size: 16px;
-        margin-left: 0;
-        margin-right: 16px;          /* space between Gmail / LinkedIn */
-        display: inline-block;
-    }
-
+  .footer-links a {
+    font-size: 16px;
+    margin-left: 0;
+    margin-right: 16px; /* space between Gmail / LinkedIn */
+    display: inline-block;
+  }
 }
-
-
