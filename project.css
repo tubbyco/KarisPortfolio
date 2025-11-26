@@ -1,4 +1,10 @@
 /* ---- GENERAL ---- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -10,6 +16,8 @@ body {
   color: #1b1b1b;
   line-height: 1.6;
 }
+
+
 
 /* ---- NAV ---- */
 nav {
@@ -66,16 +74,17 @@ a:hover::after {
 /* ---------------- HERO SECTION ---------------- */
 
 .hero-container {
+    max-width: 1800px; 
   margin: 0 auto;
-  padding: 80px 80px 60px;
+  padding: 80px 80px 120px 80px;
 }
 
 .project-title {
-  max-width: 1000px;
-  font-size: 32px;
-  line-height: 1.45;
+  max-width: 800px;
+  font-size: 28px;
+  line-height: 1.5;
   font-weight: 500;
-  margin-bottom: 40px;
+  margin-bottom: 80px;
 }
 
 .hero-image {
@@ -107,9 +116,9 @@ a:hover::after {
 .overline {
   list-style: none;
   padding: 0;
-  margin: 32px 0 40px; /* gap below title & above image */
+  margin: 0 0 80px; /* gap below title & above image */
   display: flex;
-  gap: 120px; /* space between Role & Timeline */
+  gap: 120px; 
 }
 
 .overline-item {
@@ -120,7 +129,7 @@ a:hover::after {
 
 .overline-label {
   font-size: 20px;
-  color: #a39e96; /* soft grey, like your Selected works label */
+  color: #a39e96; 
 }
 
 .overline-desc {
@@ -128,19 +137,94 @@ a:hover::after {
   color: #1b1b1b;
 }
 
-/* ---------------- SECTION HEADERS ---------------- */
+/* ----- MEDIA SECTION BELOW INFO-SPLIT ----- */
 
-.section-header {
-  font-size: 22px;
-  font-weight: 500;
-  margin-bottom: 15px;
-  margin-top: 40px;
+.info-media-section {
+  margin: 20px auto 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;   /* spacing between text + image */
 }
 
-/* ---------------- PARAGRAPHS ---------------- */
 
-.project-paragraph {
-  font-size: 18px;
+
+/* subtitle text (same color as .overline-desc) */
+.info-desc {
+  font-size: 20px;
+  color: #1B1B1B;
+  line-height: 1.6;
+  margin-top: 5px;
+}
+
+/* Full-width media container */
+.info-media-figure {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Full width image/video */
+.info-media-figure img,
+.info-media-figure video {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.info-image {
+     width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px 0 60px;
+}
+
+.info-full-width {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px 0px 0px;
+}
+
+.info-row-spaced {
+    margin-top: 30px;
+}
+
+
+
+/* ---------- TWO-COLUMN INFO SECTION ---------- */
+.info-split {
+  display: grid;
+  gap: 60px;
+}
+
+.info-row {
+  display: grid;
+  grid-template-columns: 1fr 2fr;  
+  gap: 20px 150px; /* row gap, column gap */
+  align-items: start;
+  margin-bottom: 0;
+}
+
+.info-overline {
+  text-transform: none;     
+  font-size: 20px;
+  color: #A39E96;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.info-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1B1B1B;
+  margin: 0 0 10px;
+}
+
+.info-body {
+  font-size: 20px;
+  color: #1B1B1B;
+  line-height: 1.6;
+  margin: 0;
   max-width: 800px;
 }
 
@@ -177,43 +261,106 @@ footer {
 /* ---------------- RESPONSIVE ---------------- */
 
 @media (max-width: 768px) {
+  /* NAV */
   nav {
     position: sticky;
     top: 0;
     z-index: 999;
-    background: transparent;
-    padding: 30px 20px;
-    gap: 24px;
-  }
-
-  .hero-container {
-    padding: 50px 20px;
-  }
-
-  .project-title {
-    font-size: 26px;
-  }
-
-  .project-info {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .container {
-    padding: 0 20px 80px;
-  }
-
-  .overline {
-    flex-direction: column;
+    background: #fffdf8;          /* slight solid bg so text doesn't sit on images */
+    padding: 20px 16px;
     gap: 16px;
   }
 
-  /* ===== FOOTER MOBILE ===== */
+  nav a {
+    font-size: 18px;
+  }
+
+  /* HERO */
+  .hero-container {
+    padding: 32px 20px 56px;
+  }
+
+  .project-title {
+    font-size: 22px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+
+  /* MAIN BODY WRAPPER */
+  .container {
+    padding: 0 20px 64px;
+  }
+
+  /* INFO SPLIT (Overview / My Role / Exploration etc.) */
+  .info-split {
+    gap: 20px;                    /* vertical gap between each info-row */
+  }
+
+  .info-row {
+    grid-template-columns: 1fr;   /* stack columns */
+    gap: 8px;                     /* small gap between left/right content */
+  }
+
+  .info-row-spaced {
+    margin-top: 32px;             /* extra breathing room before Exploration / Branding */
+  }
+
+  .info-overline {
+    font-size: 18px;
+  }
+
+  .info-title {
+    font-size: 18px;
+    margin-bottom: 6px;
+  }
+
+  .info-body {
+    font-size: 18px;
+    max-width: 100%;
+  }
+
+  /* MEDIA SECTIONS (videos / full-width images) */
+  .info-media-section {
+    margin: 32px 0 0;             /* more top space, no extra side margin */
+    gap: 8px;
+  }
+
+  .info-media-head {
+    max-width: 100%;
+  }
+
+  .info-desc {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  .info-media-figure {
+    width: 100%;
+  }
+
+  .info-media-figure img,
+  .info-media-figure video,
+  .info-full-width,
+  .info-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 16px 0 40px;
+  }
+
+  /* OVERLINE LIST (if you ever use the <ul .overline> pattern) */
+  .overline {
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 32px;
+  }
+
+  /* FOOTER MOBILE */
   .footer {
-    flex-direction: column; /* stack text + links */
-    align-items: flex-start; /* left-align everything */
-    padding: 24px 20px 32px; /* match mobile padding */
-    gap: 8px; /* space between lines */
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px 20px 32px;
+    gap: 8px;
   }
 
   .footer p {
@@ -227,7 +374,7 @@ footer {
   .footer-links a {
     font-size: 16px;
     margin-left: 0;
-    margin-right: 16px; /* space between Gmail / LinkedIn */
+    margin-right: 16px;
     display: inline-block;
   }
 }
