@@ -76,7 +76,7 @@ a:hover::after {
 .hero-container {
     max-width: 1800px; 
   margin: 0 auto;
-  padding: 80px 80px 120px 80px;
+  padding: 80px 80px 100px 80px;
 }
 
 .project-title {
@@ -140,7 +140,7 @@ a:hover::after {
 /* ----- MEDIA SECTION BELOW INFO-SPLIT ----- */
 
 .info-media-section {
-  margin: 20px auto 20px;
+  margin: 20px auto 0px;
   display: flex;
   flex-direction: column;
   gap: 10px;   /* spacing between text + image */
