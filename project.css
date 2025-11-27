@@ -17,8 +17,6 @@ body {
   line-height: 1.6;
 }
 
-
-
 /* ---- NAV ---- */
 nav {
   position: sticky;
@@ -74,7 +72,7 @@ a:hover::after {
 /* ---------------- HERO SECTION ---------------- */
 
 .hero-container {
-    max-width: 1800px; 
+  max-width: 1800px;
   margin: 0 auto;
   padding: 80px 80px 100px 80px;
 }
@@ -108,7 +106,7 @@ a:hover::after {
 .container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 60px 120px;
+  padding: 0 60px 150px;
 }
 
 /* ---------------- PROJECT INFO ---------------- */
@@ -118,7 +116,7 @@ a:hover::after {
   padding: 0;
   margin: 0 0 80px; /* gap below title & above image */
   display: flex;
-  gap: 120px; 
+  gap: 120px;
 }
 
 .overline-item {
@@ -129,7 +127,7 @@ a:hover::after {
 
 .overline-label {
   font-size: 20px;
-  color: #a39e96; 
+  color: #a39e96;
 }
 
 .overline-desc {
@@ -143,15 +141,13 @@ a:hover::after {
   margin: 20px auto 0px;
   display: flex;
   flex-direction: column;
-  gap: 10px;   /* spacing between text + image */
+  gap: 10px; /* spacing between text + image */
 }
-
-
 
 /* subtitle text (same color as .overline-desc) */
 .info-desc {
   font-size: 20px;
-  color: #1B1B1B;
+  color: #1b1b1b;
   line-height: 1.6;
   margin-top: 5px;
 }
@@ -172,7 +168,7 @@ a:hover::after {
 }
 
 .info-image {
-     width: 100%;
+  width: 100%;
   height: auto;
   display: block;
   margin: 20px 0 60px;
@@ -186,10 +182,14 @@ a:hover::after {
 }
 
 .info-row-spaced {
-    margin-top: 30px;
+  margin-top: 30px;
 }
 
-
+.info-media-figure .spaced-image {
+  display: block;
+  width: 100%;
+  margin-bottom: 40px; /* adjust spacing */
+}
 
 /* ---------- TWO-COLUMN INFO SECTION ---------- */
 .info-split {
@@ -199,16 +199,16 @@ a:hover::after {
 
 .info-row {
   display: grid;
-  grid-template-columns: 1fr 2fr;  
+  grid-template-columns: 1fr 2fr;
   gap: 20px 150px; /* row gap, column gap */
   align-items: start;
   margin-bottom: 0;
 }
 
 .info-overline {
-  text-transform: none;     
+  text-transform: none;
   font-size: 20px;
-  color: #A39E96;
+  color: #a39e96;
   display: block;
   margin-bottom: 5px;
 }
@@ -216,13 +216,13 @@ a:hover::after {
 .info-title {
   font-size: 20px;
   font-weight: 600;
-  color: #1B1B1B;
+  color: #1b1b1b;
   margin: 0 0 10px;
 }
 
 .info-body {
   font-size: 20px;
-  color: #1B1B1B;
+  color: #1b1b1b;
   line-height: 1.6;
   margin: 0;
   max-width: 800px;
@@ -266,7 +266,7 @@ footer {
     position: sticky;
     top: 0;
     z-index: 999;
-    background: #fffdf8;          /* slight solid bg so text doesn't sit on images */
+    background: #fffdf8; /* slight solid bg so text doesn't sit on images */
     padding: 20px 16px;
     gap: 16px;
   }
@@ -293,16 +293,16 @@ footer {
 
   /* INFO SPLIT (Overview / My Role / Exploration etc.) */
   .info-split {
-    gap: 20px;                    /* vertical gap between each info-row */
+    gap: 20px; /* vertical gap between each info-row */
   }
 
   .info-row {
-    grid-template-columns: 1fr;   /* stack columns */
-    gap: 8px;                     /* small gap between left/right content */
+    grid-template-columns: 1fr; /* stack columns */
+    gap: 8px; /* small gap between left/right content */
   }
 
   .info-row-spaced {
-    margin-top: 32px;             /* extra breathing room before Exploration / Branding */
+    margin-top: 32px; /* extra breathing room before Exploration / Branding */
   }
 
   .info-overline {
@@ -321,7 +321,7 @@ footer {
 
   /* MEDIA SECTIONS (videos / full-width images) */
   .info-media-section {
-    margin: 32px 0 0;             /* more top space, no extra side margin */
+    margin: 32px 0 0; /* more top space, no extra side margin */
     gap: 8px;
   }
 
