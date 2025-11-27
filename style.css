@@ -82,12 +82,52 @@ nav a:hover {
   padding: 30px 0 150px;
 }
 
-/* Soft fade + slide wave animation */
+/* HERO ANIMATION */
 .hero-intro {
   opacity: 0;
   transform: translateY(18px);
   animation: fadeWave 1s ease-out forwards;
-  animation-delay: 0.4s; /* slight delay for elegance */
+  animation-delay: 0.4s;
+}
+
+.hero-subtitle {
+  font-family: "Lusitana", serif;
+  font-size: 20px;
+  color: #a39e96;
+  margin-top: 20px;
+  letter-spacing: 0.07em;
+
+  /* animation */
+  opacity: 0;
+  animation: slideInLeft 0.8s ease-out forwards;
+  animation-delay: 1.2s; /* starts AFTER hero-intro finishes */
+}
+
+.envelope-fade {
+  opacity: 0;
+  animation: fadeInEnvelope 1.6s ease-out forwards;
+  animation-delay: 1.6s; /* starts at same time as subtitle */
+}
+
+@keyframes fadeInEnvelope {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @keyframes fadeWave {
@@ -105,7 +145,7 @@ nav a:hover {
   }
 }
 
-/* Accessibility */
+/* MOBILE */
 @media (prefers-reduced-motion: reduce) {
   .hero-intro {
     animation: none;
