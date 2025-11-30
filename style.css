@@ -109,6 +109,46 @@ nav a:hover {
   animation-delay: 1.6s; /* starts at same time as subtitle */
 }
 
+.envelope-container img {
+  position: relative;
+}
+
+/* wax-shine overlay as a pseudo-element */
+.envelope-container::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  width: 120px;
+  height: 120px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 30% 20%,
+    rgba(255, 255, 255, 0.25),
+    rgba(255, 255, 255, 0) 60%
+  );
+  opacity: 0;
+  pointer-events: none;
+  animation: sealGlow 4s ease-in-out infinite;
+}
+
+@keyframes sealGlow {
+  0%,
+  60% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  70% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.05);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
 @keyframes fadeInEnvelope {
   0% {
     opacity: 0;
