@@ -29,11 +29,10 @@
       <section class="hero">
         <div class="hero-left">
           <h1 class="hero-intro">
-            <span class="name">Karis Chong</span> is a Product, UI/UX Designer
-            based in Singapore who is passionate in creating
-            <span class="highlight">human centered experiences.</span>
+            <span class="hero-title-line">KARIS</span>
+            <span class="hero-title-line">PORTFOLIO</span>
           </h1>
-          <p class="hero-subtitle">Welcome to my portfolio.</p>
+          <p class="hero-subtitle">Collection of my design work.</p>
         </div>
 
         <div class="hero-right">
@@ -143,5 +142,15 @@
         <a href="https://linkedin.com">LinkedIn</a>
       </div>
     </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const wrapper = document.querySelector(".envelope-wrapper");
+
+        wrapper.addEventListener("click", () => {
+          wrapper.classList.toggle("open");
+        });
+      });
+    </script>
   </body>
 </html>

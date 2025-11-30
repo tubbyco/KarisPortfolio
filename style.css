@@ -75,11 +75,35 @@ nav a:hover {
 
 /* Hero Section */
 .hero {
-  display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap: -100px;
-  align-items: start;
-  padding: 30px 0 150px;
+  padding: 0 0 150px;
+}
+
+.hero-left {
+  max-width: 600px;
+  padding-top: 0;
+}
+
+.hero-left h1 {
+  font-size: 80px;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 0;
+}
+
+.hero-left h1 .name {
+  color: #f02800;
+  font-style: italic;
+}
+
+.hero-left h1 .highlight {
+  color: #f02800;
+  font-style: italic;
+}
+
+.hero-right {
+  margin-top: 0px; /* space between text and envelope */
+  display: flex;
+  justify-content: center;
 }
 
 /* HERO ANIMATION */
@@ -93,6 +117,7 @@ nav a:hover {
 .hero-subtitle {
   font-family: "Lusitana", serif;
   font-size: 20px;
+  font-weight: 400;
   color: #a39e96;
   margin-top: 20px;
   letter-spacing: 0.07em;
@@ -103,14 +128,33 @@ nav a:hover {
   animation-delay: 1.2s; /* starts AFTER hero-intro finishes */
 }
 
-.envelope-fade {
-  opacity: 0;
-  animation: fadeInEnvelope 1.6s ease-out forwards;
-  animation-delay: 1.6s; /* starts at same time as subtitle */
+.envelope-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 640px; /* overall width */
+  margin: 0 auto;
+  cursor: pointer;
+  animation: idleHint 3s ease-in-out infinite; /* tiny bounce hint */
+}
+
+.envelope-container {
+  width: 100%;
+  max-width: 900px;
+  position: relative; /* so the letter can be absolutely positioned */
+  margin-left: auto;
+  margin-right: 0;
 }
 
 .envelope-container img {
-  position: relative;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* envelope */
+.envelope-img {
+  width: 100%;
+  display: block;
 }
 
 /* wax-shine overlay as a pseudo-element */
@@ -131,6 +175,20 @@ nav a:hover {
   opacity: 0;
   pointer-events: none;
   animation: sealGlow 4s ease-in-out infinite;
+}
+
+/* Envelope fades in after subtitle */
+.envelope-fade {
+  opacity: 0;
+  animation: fadeInEnvelope 1.2s ease-out forwards;
+  animation-delay: 2s; /* after subtitle (1.2s) finishes */
+}
+
+/* Envelope fades in after subtitle */
+.envelope-fade {
+  opacity: 0;
+  animation: fadeInEnvelope 1.2s ease-out forwards;
+  animation-delay: 2s; /* after subtitle (1.2s) finishes */
 }
 
 @keyframes sealGlow {
@@ -194,50 +252,9 @@ nav a:hover {
   }
 }
 
-.hero-left {
-  max-width: 800px;
-  padding-top: 0;
-}
-
-.hero-left h1 {
-  font-size: 32px;
-  font-weight: 500;
-  line-height: 1.5;
-  margin-bottom: 0;
-}
-
-.hero-left h1 .name {
-  color: #f02800;
-  font-style: italic;
-}
-
-.hero-left h1 .highlight {
-  color: #f02800;
-  font-style: italic;
-}
-
-.hero-right {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding-top: 100px;
-  margin-left: -200px;
-}
-
-.envelope-container {
-  width: 100%;
-  max-width: 100%;
-}
-
-.envelope-container img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
 /* Selected Works Section */
 .selected-works {
-  padding: 0 0 60px;
+  padding: 0 0 150px;
 }
 
 .selected-works h2 {
@@ -325,6 +342,7 @@ footer {
 }
 
 /* Responsive Design */
+/* Responsive Design */
 @media (max-width: 768px) {
   .container {
     padding: 0 20px;
@@ -335,45 +353,65 @@ footer {
     top: 0;
     z-index: 999;
     background: transparent;
-    padding: 30px 20px;
-    gap: 30px;
+    padding: 24px 20px;
+    gap: 24px;
   }
 
+  /* HERO MOBILE */
   .hero {
-    grid-template-columns: 1fr;
-    gap: 40px;
     padding: 40px 0 60px;
   }
 
+  .hero-left {
+    max-width: 420px;
+  }
+
   .hero-left h1 {
-    font-size: 28px;
+    font-size: 40px; /* bigger title */
+    line-height: 1.2;
+    max-width: 340px; /* keeps it to ~2 lines */
+  }
+
+  .hero-subtitle {
+    font-size: 16px;
+    margin-top: 16px;
   }
 
   .hero-right {
-    padding-top: 0;
-    margin-left: 0;
+    margin-top: 48px; /* space between title and envelope */
+    justify-content: center;
+    width: 100%;
+    overflow: hidden; /* stop any tiny overflow */
   }
 
   .envelope-container {
-    max-width: 450px;
+    width: 100%; /* fill mobile width */
+    max-width: 100%; /* no more 900px on mobile */
+    margin: 0 auto;
   }
 
+  .envelope-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* SELECTED WORKS */
   .work-grid {
     grid-template-columns: 1fr;
     gap: 30px;
   }
 
-  /* you’re using aspect-ratio now, so no fixed height needed */
   .work-card-image {
     height: auto;
   }
 
-  /* ===== FOOTER MOBILE ===== */
+  /* FOOTER MOBILE */
   .footer {
-    flex-direction: column; /* stack text + links */
-    align-items: flex-start; /* left-align everything */
-    padding: 24px 20px 32px; /* match mobile padding */
-    gap: 8px; /* space between lines */
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px 20px 32px;
+    gap: 8px;
   }
 
   .footer p {
@@ -387,7 +425,7 @@ footer {
   .footer-links a {
     font-size: 16px;
     margin-left: 0;
-    margin-right: 16px; /* space between Gmail / LinkedIn */
+    margin-right: 16px;
     display: inline-block;
   }
 }
