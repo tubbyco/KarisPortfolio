@@ -20,8 +20,15 @@
   <body>
     <!-- Navigation -->
     <nav>
-      <a href="#works">Works</a>
-      <a href="#resume">Resume</a>
+      <button class="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav-links">
+        <a href="#works">Works</a>
+        <a href="#resume">Resume</a>
+      </div>
     </nav>
 
     <div class="container">
@@ -147,8 +154,27 @@
       document.addEventListener("DOMContentLoaded", () => {
         const wrapper = document.querySelector(".envelope-wrapper");
 
-        wrapper.addEventListener("click", () => {
-          wrapper.classList.toggle("open");
+        if (wrapper) {
+          wrapper.addEventListener("click", () => {
+            wrapper.classList.toggle("open");
+          });
+        }
+
+        // Hamburger menu toggle
+        const hamburger = document.querySelector(".hamburger");
+        const navLinks = document.querySelector(".nav-links");
+
+        hamburger.addEventListener("click", () => {
+          hamburger.classList.toggle("active");
+          navLinks.classList.toggle("active");
+        });
+
+        // Close menu when clicking a link
+        document.querySelectorAll(".nav-links a").forEach((link) => {
+          link.addEventListener("click", () => {
+            hamburger.classList.remove("active");
+            navLinks.classList.remove("active");
+          });
         });
       });
     </script>

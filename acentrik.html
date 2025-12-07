@@ -13,10 +13,17 @@
   </head>
 
   <body>
-    <!-- NAV -->
+    <!-- Navigation -->
     <nav>
-      <a href="index.html#works">Works</a>
-      <a href="resume.html">Resume</a>
+      <button class="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav-links">
+        <a href="/#works">Works</a>
+        <a href="/#resume">Resume</a>
+      </div>
     </nav>
 
     <main>
@@ -36,10 +43,18 @@
             <span class="overline-label">Timeline</span>
             <span class="overline-desc">3 Months</span>
           </li>
+
+          <li class="overline-item">
+            <span class="overline-label">Tools</span>
+            <span class="overline-desc">Figma, Miro, FigJam</span>
+          </li>
         </ul>
 
         <div class="hero-image">
-          <img src="images/Acentrik Thumbnail.webp" alt="Acentrik Project Hero" />
+          <img
+            src="images/Acentrik Thumbnail.webp"
+            alt="Acentrik Project Hero"
+          />
         </div>
       </section>
 
@@ -230,8 +245,7 @@
             </div>
           </div>
 
-
-             <!-- Final Prototype -->
+          <!-- Final Prototype -->
           <div class="info-media-section">
             <div class="info-media-head">
               <span class="info-overline">Final Prototype</span>
@@ -253,7 +267,6 @@
       </div>
     </main>
 
-
     <!-- Footer -->
     <footer class="footer">
       <p>© Made by Karis 2025</p>
@@ -262,9 +275,25 @@
         <a href="https://linkedin.com">LinkedIn</a>
       </div>
     </footer>
-  </body>
-</html>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Hamburger menu toggle
+        const hamburger = document.querySelector(".hamburger");
+        const navLinks = document.querySelector(".nav-links");
 
+        hamburger.addEventListener("click", () => {
+          hamburger.classList.toggle("active");
+          navLinks.classList.toggle("active");
+        });
 
+        // Close menu when clicking a link
+        document.querySelectorAll(".nav-links a").forEach((link) => {
+          link.addEventListener("click", () => {
+            hamburger.classList.remove("active");
+            navLinks.classList.remove("active");
+          });
+        });
+      });
+    </script>
   </body>
 </html>

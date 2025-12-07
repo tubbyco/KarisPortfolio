@@ -13,10 +13,17 @@
   </head>
 
   <body>
-    <!-- NAV -->
+    <!-- Navigation -->
     <nav>
-      <a href="index.html#works">Works</a>
-      <a href="resume.html">Resume</a>
+      <button class="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav-links">
+        <a href="/#works">Works</a>
+        <a href="/#resume">Resume</a>
+      </div>
     </nav>
 
     <main>
@@ -34,7 +41,11 @@
           </li>
           <li class="overline-item">
             <span class="overline-label">Timeline</span>
-            <span class="overline-desc">2 Weeks</span>
+            <span class="overline-desc">3 Weeks</span>
+          </li>
+          <li class="overline-item">
+            <span class="overline-label">Tools</span>
+            <span class="overline-desc">Figma, Webflow</span>
           </li>
         </ul>
 
@@ -97,7 +108,7 @@
             </div>
           </div>
 
- <!-- Problem -->
+          <!-- Problem -->
           <div class="info-row info-row-spaced">
             <div>
               <span class="info-overline">Problem</span>
@@ -106,7 +117,13 @@
 
             <div>
               <p class="info-body">
-                The current webpage lacks a clear focus and hierarchy, making it difficult for visitors to understand the organisation’s purpose. Key issues include an unclear mission statement, absence of strong calls-to-action like a  “Donate” button, excessive text with poor readability, and dull imagery that fails to evoke emotional engagement. Overall, the design does not effectively communicate impact or inspire user participation.
+                The current webpage lacks a clear focus and hierarchy, making it
+                difficult for visitors to understand the organisation’s purpose.
+                Key issues include an unclear mission statement, absence of
+                strong calls-to-action like a “Donate” button, excessive text
+                with poor readability, and dull imagery that fails to evoke
+                emotional engagement. Overall, the design does not effectively
+                communicate impact or inspire user participation.
               </p>
             </div>
           </div>
@@ -118,12 +135,17 @@
             class="info-full-width"
           />
 
-       <!-- Competitors -->
+          <!-- Competitors -->
           <div class="info-media-section">
             <div class="info-media-head">
               <span class="info-overline">Competitors</span>
               <p class="info-desc">
-               We noticed that other non-profit sites like World Wildlife Fund and Habitat for Humanity display a clear call to action and meaningful imagery that clearly shows the organisation’s purpose. This is a huge contrast to ACRES current homepage and we were inspired to improve its visual storytelling and user experience
+                We noticed that other non-profit sites like World Wildlife Fund
+                and Habitat for Humanity display a clear call to action and
+                meaningful imagery that clearly shows the organisation’s
+                purpose. This is a huge contrast to ACRES current homepage and
+                we were inspired to improve its visual storytelling and user
+                experience
               </p>
             </div>
 
@@ -134,7 +156,7 @@
                 alt="Competitor"
                 class="spaced-image"
               />
-               <img
+              <img
                 loading="lazy"
                 src="images/ACRES Competitor 2 .webp"
                 alt="Competitor"
@@ -143,9 +165,9 @@
             </div>
           </div>
 
-           <!-- Ideation -->
+          <!-- Ideation -->
 
-<div class="info-row info-row-spaced">
+          <div class="info-row info-row-spaced">
             <div>
               <span class="info-overline">Ideation</span>
               <h3 class="info-title">Translating Insights Into Design</h3>
@@ -153,16 +175,23 @@
 
             <div>
               <p class="info-body">
-         During ideation, we focused on translating ACRES’ mission into a clear, emotionally engaging user journey by refining content priorities, simplifying navigation, and shaping ideas that drive action.
+                During ideation, we focused on translating ACRES’ mission into a
+                clear, emotionally engaging user journey by refining content
+                priorities, simplifying navigation, and shaping ideas that drive
+                action.
               </p>
             </div>
           </div>
 
-            <div class="info-media-section">
+          <div class="info-media-section">
             <div class="info-media-head">
               <span class="info-overline">Information Architecture</span>
               <p class="info-desc">
-             First things first, we had to fix their existing information architecture. It currently has issues with convoluted user flows and duplicated content across different pages. We decided to restructure it into clear pages and replaced redundancies with relevant information
+                First things first, we had to fix their existing information
+                architecture. It currently has issues with convoluted user flows
+                and duplicated content across different pages. We decided to
+                restructure it into clear pages and replaced redundancies with
+                relevant information
               </p>
             </div>
 
@@ -176,12 +205,15 @@
             </div>
           </div>
 
- <!-- Hero Section -->
+          <!-- Hero Section -->
           <div class="info-media-section">
             <div class="info-media-head">
               <span class="info-overline">Hero Section</span>
               <p class="info-desc">
-        The original hero section felt full and visually disconnected from ACRES’ mission. We replaced it with a bold, clear imagery and a concise, inspiring message that highlights coexistence between humans and animals, supported by a clear call-to-action.
+                The original hero section felt full and visually disconnected
+                from ACRES’ mission. We replaced it with a bold, clear imagery
+                and a concise, inspiring message that highlights coexistence
+                between humans and animals, supported by a clear call-to-action.
               </p>
             </div>
 
@@ -195,12 +227,16 @@
             </div>
           </div>
 
-<!-- Content Hierachy -->
+          <!-- Content Hierachy -->
           <div class="info-media-section">
             <div class="info-media-head">
               <span class="info-overline">Content Hierachy</span>
               <p class="info-desc">
-       The current content structure in Acres feel like a long essay, the dense paragraph texts and lack of engaging UI makes it painful to read.   We redesigned it into a clean, modular layout that creates a visual balance, which makes the organisation’s work more digestible and engaging for visitors.
+                The current content structure in Acres feel like a long essay,
+                the dense paragraph texts and lack of engaging UI makes it
+                painful to read. We redesigned it into a clean, modular layout
+                that creates a visual balance, which makes the organisation’s
+                work more digestible and engaging for visitors.
               </p>
             </div>
 
@@ -213,15 +249,11 @@
               />
             </div>
           </div>
-
-
-
         </div>
       </div>
-      
     </main>
 
-<!-- Footer -->
+    <!-- Footer -->
     <footer class="footer">
       <p>© Made by Karis 2025</p>
       <div class="footer-links">
@@ -229,15 +261,26 @@
         <a href="https://linkedin.com">LinkedIn</a>
       </div>
     </footer>
-  </body>
-</html>
 
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Hamburger menu toggle
+        const hamburger = document.querySelector(".hamburger");
+        const navLinks = document.querySelector(".nav-links");
 
-  </body>
-</html>
+        hamburger.addEventListener("click", () => {
+          hamburger.classList.toggle("active");
+          navLinks.classList.toggle("active");
+        });
 
-
-
-
+        // Close menu when clicking a link
+        document.querySelectorAll(".nav-links a").forEach((link) => {
+          link.addEventListener("click", () => {
+            hamburger.classList.remove("active");
+            navLinks.classList.remove("active");
+          });
+        });
+      });
+    </script>
   </body>
 </html>
