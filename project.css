@@ -24,9 +24,13 @@ nav {
   z-index: 999;
   background: transparent;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: center;
   padding: 40px 80px;
-  gap: 40px;
+}
+
+.logo:hover::after {
+  width: 0 !important;
 }
 
 .hamburger {
@@ -48,6 +52,12 @@ nav a {
 
 nav a:hover {
   opacity: 0.7;
+}
+
+.logo img {
+  height: 40px;
+  width: auto;
+  display: block;
 }
 
 /* Global hover style for all links */
@@ -270,7 +280,6 @@ footer {
 /* ---------------- RESPONSIVE ---------------- */
 
 @media (max-width: 768px) {
-  /* NAV */
   .container {
     padding: 0 20px;
   }
@@ -282,7 +291,7 @@ footer {
     background: #fffdf8;
     padding: 24px 20px;
     gap: 24px;
-    justify-content: flex-end;
+    justify-content: space-between;
   }
 
   .hamburger {
@@ -420,7 +429,7 @@ footer {
 
   /* FOOTER MOBILE */
   .footer {
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
     padding: 24px 20px 32px;
     gap: 8px;
@@ -431,7 +440,7 @@ footer {
   }
 
   .footer-links {
-    margin-top: 4px;
+    margin-top: 16px;
   }
 
   .footer-links a {
